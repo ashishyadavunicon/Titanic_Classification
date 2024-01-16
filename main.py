@@ -35,5 +35,3 @@ if st.button('Predict'):
         print('You will Survive')
     else:
         print('you will not survive')
-
-print(Done)
