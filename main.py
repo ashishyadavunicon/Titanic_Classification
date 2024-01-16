@@ -28,8 +28,12 @@ if st.button('Predict'):
     input_features_array = np.array(input_features).reshape(1, -1)
 
     prediction=trained_model.predict(input_features_array)
+    print(prediction)
+    
 
     if prediction==[1]:
         print('You will Survive')
     else:
         print('you will not survive')
+
+print(Done)
