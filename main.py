@@ -17,7 +17,7 @@ st.write(f"Please give input based on the changes what we did in data")
 input_features = []
 
 # Assuming you have a list of feature names
-feature_names = ['Age', 'Sex', 'Fare', 'Embarked','Pclass','SibSp','Parch']
+feature_names = ['Pclass','Sex', 'Fare','SibSp','Parch','Cabin', 'Embarked']
 for feature_name in feature_names:
     value = st.number_input(f"Enter value for {feature_name}: ")
     input_features.append(value)
