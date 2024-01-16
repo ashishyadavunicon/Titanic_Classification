@@ -17,7 +17,7 @@ st.write(f"Please give input based on the changes what we did in data")
 input_features = []
 
 # Assuming you have a list of feature names
-feature_names = ['Age', 'Sex', 'Fare', 'Embarked','Pclass','SibSp','Parch']
+feature_names = ['Pclass','Sex','SibSp','Parch','Fare','Cabin','Embarked']
 for feature_name in feature_names:
     value = st.number_input(f"Enter value for {feature_name}: ")
     input_features.append(value)
@@ -27,14 +27,9 @@ if st.button('Predict'):
     # Convert input features to a NumPy array
     input_features_array = np.array(input_features).reshape(1, -1)
 
-    # Make predictions using the loaded model
-    predicted_class = trained_model.predict(input_features_array)
+    prediction=trained_model.predict(input_features_array)
 
-
-    
-    st.write(f"Predicted class: {predicted_class[0]}")
-if predicted_class[0]== 1:
-    print("you will survive")
-else:
-    print("you will not survive")
-       
+    if prediction==[1]:
+        print('You will Survive')
+    else:
+        print('you will not survive')
